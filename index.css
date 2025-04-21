@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+nav {
+    position: sticky;
+    top: 0;
+    background: #A198FA;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 1rem;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background: #2980b9;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #3498db;
+    top: 100%;
+    left: 0;
+    list-style: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li a {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+}
+
+
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #4550FA;
+    color: #ffffff;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+
+section {
+    padding: 2rem 4rem;
+}
+
+#introduccion {
+    background: #609AF7;
+}
+
+#contenido #sub1,
+#contenido #sub5{
+    background: #8760F7;
+}
+
+#contenido #sub2,
+#contenido #sub6{
+    background: #606BF7;
+}
+
+#contenido #sub3,
+#contenido #sub7{
+    background: #60CAF7;
+}
+
+#contenido #sub4,
+#contenido #sub8{
+    background: #B24DFA;
+}
+
+#conclusiones {
+    background: #609AF7;
+}
+
+
+.subseccion {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-top: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+}
+
+.imagen-primero {
+    flex-direction: row;
+}
+
+.texto-primero {
+    flex-direction: row-reverse;
+}
+
+
+.subseccion img {
+    width: 50%;
+    transition: transform 0.3s;
+}
+
+.subseccion img:hover {
+    transform: scale(1.15);
+}
+
+.subseccion .text {
+    width: 50%;
+    padding: 1rem;
+}
+
+.text ul{
+    padding-left: 1rem;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .subseccion {
+        flex-direction: column !important;
+    }
+
+    .subseccion img,
+    .subseccion .text {
+        width: 100%;
+    }
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer Trabajo HTML</title>
+    <link href="./index.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1>El Mayor Problema de la Computación Sin Resolver</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#introduccion" class="active">Introducción</a></li>
+            <li class="dropdown">
+                <a href="#contenido">Contenido ▾</a>
+                <ul class="dropdown-content">
+                    <li><a href="#sub1">Contexto histórico</a></li>
+                    <li><a href="#sub2">Definición de algoritmo</a></li>
+                    <li><a href="#sub3">Complejidad temporal vs. espacial</a></li>
+                    <li><a href="#sub4">Monitoreo de complejidad temporal</a></li>
+                    <li><a href="#sub5">Distinción entre clases P y NP</a></li>
+                    <li><a href="#sub6">Problemas NP-completos</a></li>
+                    <li><a href="#sub7">Encuestas sobre P vs NP</a></li>
+                    <li><a href="#sub8">Consecuencias de resolver P vs NP</a></li>
+                </ul>
+            </li>
+            <li><a href="#conclusiones">Conclusiones</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="introduccion">
+            <h2>Introducción</h2>
+            <br />
+            <p>El Problema P vs NP ocupa un lugar destacado en la teoría de la computación y en toda la ciencia de la complejidad algorítmica desde que el Instituto Clay de Matemáticas lo incluyó, el 24 de mayo de 2000, entre los Siete Problemas del Milenio. Aquella convocatoria marcó un hito no solo por el premio de un millón de dólares para quien presentara una solución, sino también porque, un siglo después de los problemas de Hilbert de 1900, confirmó que aún persisten grandes incógnitas sobre los límites de lo que puede ser calculado de forma eficiente.</p>
+            <br />
+            <p>Más allá de la recompensa monetaria, P vs NP plantea una cuestión de fondo: ¿existen algoritmos polinómicos que resuelvan en tiempo razonable todas las tareas cuya verificación es rápida? Resolver esta conjetura redefine conceptos fundamentales como "eficiencia", "dificultad" y "tractabilidad" en problemas de optimización, criptografía, biología computacional y más. Por estas razones, entender este problema es esencial para cualquier estudiante o investigador que aspire a profundizar en la complejidad computacional.</p>
+        </section>
+
+        <section id="contenido">
+            <h2>Contenido</h2>
+            <div id="sub1" class="subseccion texto-primero">
+                <img src="./img/hilbert.png" alt="Imagen 1">
+                <div class="text">
+                    <h3>Contexto histórico de los Problemas del Milenio</h3>
+                    <br />
+                    <p>El año 2000 trajo consigo la presentación de siete desafíos matemáticos de gran envergadura por parte del Instituto Clay, con el doble objetivo de estimular investigaciones y reconocer avances fundamentales en matemáticas. Estos problemas remiten al legado de Hilbert, quien en 1900 delineó 23 retos que, a principios del siglo XXI, seguían resonando en la comunidad científica.</p>
+                    <br />
+                    <p>Una de las razones por las que P vs NP sobresalió entre los demás es su profundo impacto potencial: una demostración de P = NP implicaría que tareas consideradas intratables como ciertos problemas de optimización podrían resolverse con rapidez, mientras que probar P ≠ NP confirmaría la existencia de barreras inherentes a la eficiencia computacional.</p>
+                </div>
+            </div>
+            <div id="sub2" class="subseccion imagen-primero">
+                <img src="./img/funcion.jpg" alt="Imagen 1">
+                <div class="text">
+                    <h3>Definición de algoritmo</h3>
+                    <br />
+                    <p>Un algoritmo puede concebirse como un conjunto finito de instrucciones precisas que transforman datos de entrada en resultados de salida. Desde una perspectiva práctica, las implementaciones en código y los lenguajes de programación permiten ejecutar estos procedimientos, pero la teoría subyacente no depende de ninguna plataforma particular: el análisis se centra en la descripción abstracta del proceso.</p>
+                </div>
+            </div>
+            <div id="sub3" class="subseccion texto-primero">
+                <img src="./img/tiempo_vs_espacio.jpg" alt="Imagen 1">
+                <div class="text">
+                    <h3>Complejidad temporal vs. espacial</h3>
+                    <br />
+                    <p>La complejidad temporal mide la cantidad de pasos (operaciones elementales) que un algoritmo exige en función del tamaño de la entrada, mientras que la complejidad espacial cuantifica la memoria necesaria para llevar a cabo dichas operaciones. Para ilustrar, la suma de dos números binarios de n bits implica, en el peor caso, recorrer todos los bits, resultando en un coste de O(n) en tiempo y un pequeño número de registros auxiliares para el acarreo. La comparación con el algoritmo de la multiplicación clásica o con métodos más avanzados muestra cómo distintas técnicas optimizan diferentes recursos.</p>
+                </div>
+            </div>
+            <div id="sub4" class="subseccion imagen-primero">
+                <img src="./img/tiempo_ejecucion.png" alt="Imagen 1">
+                <div class="text">
+                    <h3>Monitoreo de complejidad temporal</h3>
+                    <br />
+                    <p>La notación Big O ofrece una descripción del comportamiento asintótico en el peor de los casos, ignorando constantes y términos de menor orden. Por ejemplo, un recorrido de lista enlazada que visita cada nodo es O(n), mientras que la multiplicación de matrices usando el algoritmo estándar es O(n³).</p>
+                    <br />
+                    <p>Además de Big O, existen otras notaciones útiles:</p>
+                    <br />
+                    <ul>
+                        <li>Omega (Ω) para cota inferior asintótica,</li>
+                        <li>Theta (Θ) para cota ajustada.</li>
+                    </ul>
+                    <br />
+                    <p>La comprensión combinada de estas espejos permite caracterizar con precisión la eficiencia de un algoritmo en diferentes escenarios (mejor, medio, peor caso).</p>
+                </div>
+            </div>
+            <div id="sub5" class="subseccion texto-primero">
+                <img src="./img/p_vs_np.jpg" alt="Imagen 1">
+                <div class="text">
+                    <h3>Distinción entre clases P y NP</h3>
+                    <br />
+                    <p>La clase P contiene todos los problemas que admiten algoritmos de resolución en tiempo polinómico. Ejemplos típicos incluyen la ordenación por mergesort (O(n log n)) o la búsqueda en tablas hash (O(1) promedio). En cambio, NP engloba problemas cuyas soluciones pueden verificarse en tiempo polinómico: dado un certificado (solución candidata), un verificador determina su validez en tiempo polinómico.</p>
+                    <br />
+                    <p>El teorema de Cook-Levin demostró que el problema de satisfacibilidad booleana (SAT) es NP-completo, marcando el inicio de la teoría de NP-completitud. Posteriormente, Richard Karp identificó otros 21 problemas que también comparten esta propiedad, estableciendo una sólida red de reducciones polinómicas.</p>
+                </div>
+            </div>
+            <div id="sub6" class="subseccion imagen-primero">
+                <img src="./img/np_completos_2.png" alt="Imagen 1">
+                <div class="text">
+                    <h3>Problemas NP-completos</h3>
+                    <br />
+                    <p>Un problema NP-completo es aquel que está en NP y es al menos tan difícil como cualquier otro en NP, en el sentido de que cualquier instancia de un problema NP se puede transformar en una instancia de él en tiempo polinómico. Esto significa que demostrar un algoritmo polinómico para uno de estos problemas llevaría automáticamente a algoritmos polinómicos para todos los problemas en NP.</p>
+                    <br />
+                    <p>Además de SAT, problemas como el Camino Hamiltoniano, el Subconjunto Suma, el TSP (Problema del Viajante) y el Coloramiento de Grafos se encuentran en esta categoría. El estudio de heurísticas, aproximaciones y algoritmos de tipo "tiempo exponencial suavizado" es clave para abordar instancias prácticas de tales problemas.</p>
+                </div>
+            </div>
+            <div id="sub7" class="subseccion texto-primero">
+                <img src="./img/np_completos.png" alt="Imagen 1">
+                <div class="text">
+                    <h3>Encuestas sobre P vs NP</h3>
+                    <br />
+                    <p>A lo largo de las últimas décadas, se han realizado múltiples encuestas entre investigadores para conocer su opinión sobre la conjetura P vs NP. Mientras que un 61 % declara que P ≠ NP, alrededor del 30 % permanece indeciso y un 9 % sostiene que P = NP. Este reparto refleja la enorme dificultad del problema y la falta de evidencia concluyente en cualquiera de las dos direcciones.</p>
+                    <br />
+                    <p>Más allá de los porcentajes, los argumentos a favor de P ≠ NP suelen apoyarse en límites de complejidad que parecen insalvables, mientras que quienes abogan por P = NP especulan con la posibilidad de algoritmos aún desconocidos que rompan estas barreras.</p>
+                </div>
+            </div>
+            <div id="sub8" class="subseccion imagen-primero">
+                <img src="./img/cript_ia.jpg" alt="Imagen 1">
+                <div class="text">
+                    <h3>Consecuencias de resolver P vs NP</h3>
+                    <br />
+                    <p>Una demostración de P = NP transformaría radicalmente campos como la criptografía: la seguridad de muchos sistemas modernos descansa en la supuesta intractabilidad de problemas NP-completos (por ejemplo, factorización entera y logaritmo discreto). De igual modo, avances en optimización permitirían abordar eficientemente rutas de transporte, diseño de redes y problemas de programación entera hasta ahora sólo aproximables.</p>
+                    <br />
+                    <p>Por el contrario, mostrar que P ≠ NP reforzaría la certeza de las fronteras de la computación eficiente y justificaría la inversión en algoritmos aproximados, heurísticos y en modelos de computación alternativos (cuántica, distribuidos). Además, este resultado aportaría claridad teórica a áreas como la teoría de la demostración, la lógica y la teoría de juegos.</p>
+                </div>
+            </div>
+            
+            
+        </section>
+
+        <section id="conclusiones">
+            <h2>Conclusiones</h2>
+            <br />
+            <p>El Problema P vs NP continúa siendo un referente esencial en la teoría de la complejidad computacional, con implicaciones profundas para la práctica de la informática y la concepción de la resolución de problemas. La riqueza de la teoría con el teorema de Cook-Levin, las reducciones de Karp y la vasta colección de NP-completos evidencia un campo maduro, pero aún abierto.</p>
+            <br />
+            <p>La eventual resolución de la conjetura redefinirá los límites de lo computable y marcará un antes y un después en disciplinas tan diversas como la criptografía, la optimización y la inteligencia artificial. Hasta entonces, el debate y la investigación en torno a P vs NP seguirán motivando esfuerzos teóricos y experimentales en todo el mundo.</p>
+        </section>
+    </main>
+
+
+    <script src="./index.js"></script>
+
+</body>
+
+</html>
